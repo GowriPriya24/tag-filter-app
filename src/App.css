@@ -1,7 +1,36 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9ecef;
+  /* Light gray background */
+  color: #212529;
+  /* Darker text color for better readability */
+  line-height: 1.6;
 }
 
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #343a40;
+  /* Dark gray background for the header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Logo Styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,26 +42,92 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Link Styles */
+.App-link {
+  color: #17a2b8;
+  /* Updated to a teal color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #138496;
+  /* Slightly darker teal on hover */
+}
+
+/* Tag Filter Styles */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  background-color: #f8f9fa;
+  /* Very light gray for tags */
+  border: 2px solid #17a2b8;
+  /* Teal border for tags */
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tag:hover {
+  background-color: #17a2b8;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Filtered Content Styles */
+.filtered-content {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.filtered-item {
+  background-color: #ffffff;
+  /* White background for content items */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.filtered-item:hover {
+  transform: translateY(-5px);
+}
+
+.filtered-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.filtered-item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #212529;
+  /* Dark text for headings */
+}
+
+.filtered-item p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  /* Muted text for descriptions */
 }
